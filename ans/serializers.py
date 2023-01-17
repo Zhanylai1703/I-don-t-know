@@ -11,5 +11,5 @@ class QuestionSerializer(serializers.ModelSerializer):
     category = CategorySerializer()
     class Meta:
         model = Question
-        fields = ['question', 'answer', 'category']
+        fields = ['question', 'answer', 'category', 'option']
 

@@ -11,6 +11,7 @@ class Category(models.Model):
 class Question(models.Model):
     question = models.TextField(max_length=300, verbose_name='Вопрос')
     answer = models.TextField( max_length=100, verbose_name='Ответ')
+    option = models.CharField(max_length=50, default="")
     category = models.ForeignKey(Category, on_delete=models.CASCADE, verbose_name='Категория')
     
     def __str__(self):
